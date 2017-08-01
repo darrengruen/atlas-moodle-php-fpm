@@ -12,6 +12,8 @@ RUN apk add \
         libjpeg-turbo-dev \
         freetype \
         freetype-dev \
+        icu \
+        icu-dev \
     && docker-php-ext-configure gd \
         --with-gd \
         --with-freetype-dir=/usr/include \
@@ -23,6 +25,7 @@ RUN apk add \
         mysqli \
         zip \
         gd \
+        intl \
     && docker-php-ext-enable \
         pdo_mysql \
         mysqli \
