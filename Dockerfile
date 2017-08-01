@@ -14,6 +14,8 @@ RUN apk add \
         freetype-dev \
         icu \
         icu-dev \
+        libxml2 \
+        libxml2-dev \
     && docker-php-ext-configure gd \
         --with-gd \
         --with-freetype-dir=/usr/include \
@@ -26,6 +28,8 @@ RUN apk add \
         zip \
         gd \
         intl \
+        xmlrpc \
+        soap \
     && docker-php-ext-enable \
         pdo_mysql \
         mysqli \
